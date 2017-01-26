@@ -1,7 +1,7 @@
 <?php
 
 if(($_SERVER['REQUEST_METHOD'] === 'POST') && isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['email']) && isset($_POST['telefon']) &&
-isset($_POST['wiadomosc'])) {
+isset($_POST['wiadomosc']) && isset($_POST['submit'])) {
     $imie = $_POST['imie'];
     $nazwisko = $_POST['nazwisko'];
     $email = $_POST['email'];
@@ -10,9 +10,10 @@ isset($_POST['wiadomosc'])) {
 } else {
     echo "Nie uzupełniłeś pól formularza";
 }
+
 $message = 'Dziękujemy za wysłanie formularza!';
-$clickEmail = 's.polec@clickcommunity.pl';
-$sender = mail($email, "Wiadomość zwrotna", $message);
+
+$sender = mail($email1, "Wiadomość zwrotna", $message);
 
 if($sender){
     echo "Wiadomość wysłana";
