@@ -41,3 +41,8 @@ footer {
         text-align: center;
     }
 }
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}

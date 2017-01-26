@@ -21,11 +21,11 @@
 <div class="nav-container navbar-fixed-top">
     <div class="row">
         <div class="col-md-3 col-md-offset-2">
-            <a class="navbar-brand"  href="#"> <img id="logo" src="images/Ninja-icon.png" alt="seo-ninja-masters" width="50" height="50"/></a>
+            <a class="navbar-brand"  href="#"><img id="logo" src="images/Ninja-icon.png" alt="seo-ninja-masters" width="50" height="50"/></a>
         </div>
         <div class="col-md-4 col-md-offset-3">
-            <button class="btn btn-lg btn-info navbar-btn">Infolinia</button>
-            <button class="btn btn-lg btn-info navbar-btn">Napisz do nas</button>
+            <a href="#infoNum" data-toggle="modal"><button class="btn btn-lg btn-info navbar-btn">Infolinia</button></a>
+            <a href="#contact" data-toggle="modal"><button class="btn btn-lg btn-info navbar-btn">Napisz do nas</button></a>
         </div>
     </div>
 </div> <!-- Nav Container ends here! -->
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-2">
                 <h2>Co robimy?</h2>
-                <p>Pozycjonujemy strony firm i blogów tak aby znalazły się na szczycie wyników wyszukiwania! </p>
+                <p>Pozycjonujemy strony firm i blogów tak aby znalazły się na szczycie wyników wyszukiwania!</p>
             </div>
             <div class="col-md-4 col-md-offset-2">
                 <button class="btn btn-lg btn-default navbar-btn">Zobacz więcej</button>
@@ -104,7 +104,6 @@
             <h4>"Nie zdawałem sobie sprawy z potencjału internetu!"<br>Tomek Słowny, współzałożyciel "Słowniki online"</h4>
         </div>
     </div>
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -136,6 +135,63 @@
         </div>
     </div>
 </footer>
-<p style="text-align: center">&copy;Copyright @2017 </p>
+<!--  info modal -->
+<div class="modal fade" id="infoNum" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="number"> <h4 style="text-align: center">Zadzwoń do nas już teraz 564-344-222</h4>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-btn-default" data-dismiss="modal">Zamknij</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--info modal ends here -->
+<!-- contact modal -->
+<div class="modal fade" id="contact" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" method="post" action="mail.php">
+                <div class="modal-header">
+                <div class="number"> <h4 style="text-align: center">Napisz do nas!</h4></div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="firstName" class="col-lg-2 control-label">Imię</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="firstName" name="imie" placeholder="Wpisz swoje imię"><br/>
+                        </div>
+                        <label for="lastName" class="col-lg-2 control-label">Nazwisko</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="lastName" name="nazwisko" placeholder="Wpisz swoje nazwisko"><br/>
+                        </div>
+                        <label for="email" class="col-lg-2 control-label">Twój email</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Wpisz swoje e-mail"><br/>
+                        </div>
+                        <label for="telephone" class="col-lg-2 control-label">Telefon</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="telephone" name="telefon" placeholder="Wpisz swój nr tel"><br/>
+                        </div>
+                        <label for="msg" class="col-lg-2 control-label">Twoja wiadomość</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" rows="10" name="wiadomosc"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Wyślij</button>
+                    <a class="btn btn-btn-default" data-dismiss="modal">Zamknij</a>
+
+                </div>
+            </div>
+            </form>
+            </div>
+        </div>
+    </div>
+<!-- contact modal ends here! -->
+
 </body>
 </html>
